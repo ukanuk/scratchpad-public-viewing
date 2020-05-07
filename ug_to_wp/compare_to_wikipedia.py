@@ -41,7 +41,7 @@ def get_wikipedia_capital_data(base_data):
     """Get country Capitals from Wikipedia infobox on Country's page.
 
     Return base_data, but with 'Capital' column values replaced with values
-    from country infobox data. 
+    from country infobox data.
 
     """
 
@@ -69,7 +69,7 @@ def get_wp_langs(title, *languages):
     """
     Example usage:
     get_wp_langs('London')
-    get_wp_langs('London', ['es','af'])
+    get_wp_langs('London', 'es', 'af')
     """
 
     # Be considerate and don't flood requests
@@ -293,7 +293,7 @@ def print_summary(ug_data, wp_data, cmp_data, cmp_data_fuzzy=None, cmp_data_hist
 
 def merge_data_from_file(filename, base_data=None):
     """
-    Return pandas DataFrame populated from a file. 
+    Return pandas DataFrame populated from a file.
     Optionally, provide base_data as the starting base into which
     file data is imported by matching column and index names
     """
